@@ -7,5 +7,5 @@ Login - Fajri Ansyah <br>
 Edit Account - Ilham Ferry Pratama Yudha <br>
 Edit Address <br>
 Choose Products(S) <br>
-View and Update Shopping Cart <br>
+View and Update Shopping Cart - Rosyhana D <br>
 Proceed to Checkout <br>
