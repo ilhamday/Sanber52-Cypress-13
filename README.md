@@ -6,7 +6,7 @@ Pembagian Tugas : <br>
 Craete Account - Fendi Riawan <br>
 Login - Fajri Ansyah <br>
 Edit Account - Ilham Ferry Pratama Yudha <br>
-Edit Address <br>
+Edit Address - Wahidah Izmi Addinah <br>
 Choose Products(S) <br>
 View and Update Shopping Cart - Rosyhana D <br>
 Proceed to Checkout <br>
