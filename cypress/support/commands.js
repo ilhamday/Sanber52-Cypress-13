@@ -20,13 +20,13 @@ Cypress.Commands.add('magentoRegist', (firstname, lastname, email, password, con
     cy.get('#password-confirmation').type(confirmpassword)
     cy.get('#form-validate > .actions-toolbar > div.primary > .action').click()
 })
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+// Custom command by Ilham
+Cypress.Commands.add('clearField', (locator) => {
+    cy.get(locator)
+        .clear()
+})
+
+Cypress.Commands.add('checkLocator', (locator, value) => {
+    cy.get(locator).should(value)
+})
