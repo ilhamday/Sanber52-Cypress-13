@@ -4,7 +4,7 @@ Repo for 13th team
 Pembagian Tugas : <br>
 ========================================= <br>
 Craete Account - Fendi Riawan <br>
-Login - Fajri Ansyah <br>
+Login - Fajriansyah <br>
 Edit Account - Ilham Ferry Pratama Yudha <br>
 Edit Address - Wahidah Izmi Addinah <br>
 Choose Products(S) <br>
