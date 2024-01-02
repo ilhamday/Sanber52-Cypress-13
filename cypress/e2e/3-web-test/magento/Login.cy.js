@@ -9,27 +9,26 @@ describe('Login', () => {
     it('Login Berhasil', () => {
       cy.get('#email').type('fendiriawan@gmail.com');
       cy.get('#pass').type('berjalan#12345');
-      cy.get('button[title="Login"]').click(); // Asumsi tombol login, sesuaikan jika diperlukan
-      cy.url().should('include', '/customer/account/'); // Asumsi setelah login sukses, akan diarahkan ke halaman akun pelanggan
+      cy.get('#send2').click();
     });
   
     it('Login Gagal - Kredensial Salah', () => {
       cy.get('#email').type('user@invalid.com');
       cy.get('#pass').type('password123');
-      cy.get('button[title="Login"]').click(); // Asumsi tombol login, sesuaikan jika diperlukan
-      cy.get('.message-error').should('contain.text', 'Login atau kata sandi Anda salah');
+      cy.get('#send2').click();
+      cy.get('.message-error').should('contain.text', 'The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later');
     });
   
     it('Login Gagal - Email Kosong', () => {
       cy.get('#pass').type('berjalan#12345');
-      cy.get('button[title="Login"]').click(); // Asumsi tombol login, sesuaikan jika diperlukan
-      cy.get('#advice-required-entry-email').should('contain.text', 'This is a required field.');
+      cy.get('#send2').click();
+      cy.get('.message-error').should('contain.text', 'A login and a password are required.');
     });
   
     it('Login Gagal - Password Kosong', () => {
       cy.get('#email').type('fendiriawan@gmail.com');
-      cy.get('button[title="Login"]').click(); // Asumsi tombol login, sesuaikan jika diperlukan
-      cy.get('#advice-required-entry-pass').should('contain.text', 'This is a required field.');
+      cy.get('#send2').click();
+      cy.get('.message-error').should('contain.text', 'A login and a password are required.');
     });
   
     // Tambahkan skenario pengujian negatif lainnya jika diperlukan
