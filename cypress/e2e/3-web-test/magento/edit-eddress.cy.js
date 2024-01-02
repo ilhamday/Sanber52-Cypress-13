@@ -13,8 +13,14 @@ describe('Edit Address', () => {
   })
 
   it('Edit Contact Information', () =>{
-    cy.get('#firstname').type('Wahidah Izmi')
-    cy.get('#lastname').type('Addinah')
+    cy.get('#firstname')
+      .clear()
+      .type('Wahidah Izmi')
+
+    cy.get('#lastname')
+      .clear()
+      .type('Addinah')
+      
     cy.get('#telephone').type('082276956300')
   })
 
