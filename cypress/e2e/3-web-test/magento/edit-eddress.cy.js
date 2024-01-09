@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 describe('Edit Address', () => {
   //beforeEach(() => {
     //cy.visit('https://magento.softwaretestingboard.com/customer/account/')
@@ -34,6 +32,5 @@ describe('Edit Address', () => {
 
 })
 
->>>>>>> branchwahidah
 
 
