@@ -3,29 +3,34 @@ describe('Edit Address', () => {
     //cy.visit('https://magento.softwaretestingboard.com/customer/account/')
   //})
   
-  it('Login My Account Billing', () => {
+  it('Edit Address', () => {
     cy.visit('https://magento.softwaretestingboard.com/customer/account/')
     cy.get('#email').type('wahidahizadh@gmail.com')
     cy.get('.login-container > .block-customer-login > .block-content > #login-form > .fieldset > .password > .control > #pass').type('Wahidah28*')
     cy.get('.login-container > .block-customer-login > .block-content > #login-form > .fieldset > .actions-toolbar > div.primary > #send2').click()
     
-    //edit address account billing
+    //edit billing address
     cy.get('.box-billing-address > .box-actions > .action > span').click()
-  })
+    cy.inputText('#firstname','Wahidah Izmi')
+    cy.inputText('#lastname','Addinah')
+    cy.inputText('#telephone','082276956300')
 
-  it('Edit Contact Information', () =>{
-    
-    cy.get('#firstname').type('Wahidah Izmi')
-    cy.get('#lastname').type('Addinah')
-    cy.get('#telephone').type('082276956300')
-  })
+    cy.inputText('#street_1','Pematang Siantar')
+    cy.inputText('#city','Medan')
+    cy.get('#country').select('Indonesia')
+    cy.inputText('#zip','21136')
+    cy.inputText('#region','Sumatera Utara')
 
-  it('Edit Addres', () =>{
-    
-    cy.get('#street_1').type('Pematang Siantar')
-    cy.get('#city').type('Medan')
-    cy.get('#region_id').click()
-  })
+    //button save
+    cy.get('#form-validate > .actions-toolbar > div.primary > .action').click()
 
+    //edit shipping address
+    cy.get('.box-address-shipping > .box-actions > .action > span').click()
+    cy.get('#form-validate > .actions-toolbar > div.primary > .action').click()
+
+  })
 
 })
+
+
+

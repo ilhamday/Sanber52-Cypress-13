@@ -30,3 +30,11 @@ Cypress.Commands.add('clearField', (locator) => {
 Cypress.Commands.add('checkLocator', (locator, value) => {
     cy.get(locator).should(value)
 })
+
+//Command Edit Address
+Cypress.Commands.add('inputText', (locator,value) => {
+    cy.get(locator)
+    .should('be.visible')
+    .clear()
+    .type(value)
+})
