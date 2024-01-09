@@ -6,6 +6,6 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
     viewportHeight: 680,
-    defaultCommandTimeout: 5000,
+    defaultCommandTimeout: 50000,
   },
 });
